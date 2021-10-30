@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}shorten URL{% endblock %}
+
+{% block content %}
+<form action="#", method="post">
+    <label for="url">Enter an URL :</label>
+
+    <input type="url" name="nm" id="url"
+       placeholder="https://example.com"
+       pattern="https://.*" size="50"
+       required>
+    <button class="btn btn-primary">Short URL</button>
+    
+</form>
+<br>
+<label for="url">Copy URL :</label>
+<input type="url" value=https://urlshortnern.herokuapp.com/{{short_url_display}} id="myInput" size="48" style="background-color:BlanchedAlmond;">
+
+<button onclick="myFunction()" class="btn btn-success" >Copy URL</button>
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+

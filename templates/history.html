@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block body %}
+    <body>
+    <h2>URL SHORTNER DATA</h2>
+    
+    <table class="table table-hover table-dark">
+      <tr>
+        <th>ID</th>
+        <th>OriginalURL</th>
+        <th>ShortsURL</th>
+      </tr>
+      {% for i in DATAS %}
+      <tr>
+        <td>{{ i.id_ }}</td>
+        <td>{{ i.ORIGINAL_URL }}</td>
+        <td>https://urlshortnern.herokuapp.com/{{ i.SHORT_URL }}</td>
+      </tr>
+      </tr>
+    
+    
+    </body>
+
+{% endfor %}
+{% endblock %}
