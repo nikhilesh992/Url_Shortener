@@ -14,4 +14,4 @@ Werkzeug==1.0.1
 psycopg2
 Flask_migrate==3.1.0
 migrate==0.3.8
-python==3.8.8
+Python==3.8.8
